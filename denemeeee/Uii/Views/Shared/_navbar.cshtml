@@ -1,0 +1,85 @@
+﻿<html>
+<head>
+    <title>Responsive Anasayfa</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      
+        .navbar {
+            /*background-color: #00bcd4;*/
+            background-image: url('/img/navbar.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 350px;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #fff;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom-color 0.3s;
+        }
+
+            .navbar-nav .nav-link:hover {
+                border-bottom-color: blue;
+            }
+
+        .navbar-brand,
+        .navbar-nav a 
+        {
+            margin-bottom:auto ;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        .navbar-nav a {
+            margin-bottom:15rem; 
+        }
+     
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+      
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Home" asp-action="Index">Anasayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ürünler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Hizmetler</a>
+                </li>
+
+                <li class="nav-item">
+                    <a asp-controller="Admin" asp-action="ProductList" class="nav-link">Admin Products</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Admin" asp-action="CreateProduct" class="nav-link">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <a asp-controller="Admin" asp-action="CategoryList" class="nav-link">Admin Categories</a>
+                </li>
+
+                <li class="nav-item">
+                    <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="Search">
+                        <input name="q" class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Search">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Ara</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+</body>
+</html>

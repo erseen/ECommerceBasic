@@ -1,0 +1,15 @@
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\bin\Debug\netcoreapp3.1\Business.deps.json
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\bin\Debug\netcoreapp3.1\Business.dll
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\bin\Debug\netcoreapp3.1\Business.pdb
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.csproj.AssemblyReference.cache
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfoInputs.cache
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.AssemblyInfo.cs
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.csproj.CoreCompileInputs.cache
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.csproj.CopyComplete
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.dll
+C:\Users\ersen\Desktop\deneme3333\denemeeee\Business\obj\Debug\netcoreapp3.1\Business.pdb

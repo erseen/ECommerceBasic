@@ -1,0 +1,51 @@
+﻿
+@model HomeViewModel;
+@{
+    var categories = Model.Categories; 
+    var products= Model.Products;
+}
+  <div class="row " >
+    <div class="col-md-3">
+
+        <div class="list-group mt-3">
+            @foreach (var category in categories)
+            {
+               @* <a href="@Url.Action("GetProductsWithCategory", "Home", new { id = category.CategoryId })" class="list-group-item list-group-item-action">@category.Name</a>*@
+
+                <a asp-controller="Home" asp-action="GetProductsWithCategory" asp-route-id="@category.CategoryId" class="list-group-item list-group-item-action"> @category.Name</a>
+            }
+        </div> 
+  </div>
+  
+        
+                <div class="col-md-9 mt-3 mb-5">
+    <div class="row">
+        @foreach (var product in products)
+        {
+                @await Html.PartialAsync("_product", product);
+        
+         }           
+    </div>
+    
+   @* Sayfalama için *@
+    <div class="row"> 
+        <div class="col">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        @for (int i = 0; i <Model.PageInfo.TotalPages(); i++)
+                        {
+                            <li class="page-item  @(Model.PageInfo.CurrentPage==i+1?"active":"") ">
+                                <a class="page-link" href="?page=@(i+1)">@(i+1)</a>
+                                </li>
+                        }
+                     
+                    </ul>
+                </nav>
+        </div>
+    </div>
+    </div>
+  @*  Sayfalama sonu*@
+
+</div>
+
+     

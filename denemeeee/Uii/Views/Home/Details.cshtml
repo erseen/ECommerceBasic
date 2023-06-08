@@ -1,0 +1,40 @@
+﻿@model ProductDetailModel
+
+@{
+   var categories = Model.Categories; 
+   var product= Model.Product; 
+
+}
+
+<div class="row mt-4">
+    <div class="col-md-3">
+
+        <div class="list-group ">
+            @foreach (var category in categories)
+            {
+                <a asp-controller="Home" asp-action="GetProductsWithCategory" asp-route-id="@category.CategoryId" class="list-group-item list-group-item-action"> @category.Name</a>
+            }
+        </div>
+    </div>
+
+    <div class="col-md-9 mt-3 mb-4">
+        <div class="row">
+          
+                <div class="col-md-4 mb-2">
+                    <div class="card">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <img class="card-img-top mt-2" src="~/img/@product.ImageUrl" style="width:120px; height:120px; object-fit:cover;" alt="" width="80px" height="100px">
+                     </div>
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text">@product.Description</p>
+                            <a asp-controller="Home" asp-action="Details" asp-route-id="@product.ProductId" class="btn btn-primary btn-sm">İncele</a>
+                            <form method="POST" action="/product/delete" style="display: inline;">
+                                <input type="hidden" name="ProductId" value="@product.ProductId">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+    </div>

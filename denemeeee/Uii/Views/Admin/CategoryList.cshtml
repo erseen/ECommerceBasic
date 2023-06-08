@@ -1,0 +1,59 @@
+﻿@model CategoryListViewModel
+
+@{
+    var categories=Model.Categories; 
+}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <a class="btn btn-primary btn-sm" asp-controller="Admin" asp-action="CreateCategory">Category Add</a>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width:5%;" scope="col">Id</th>
+                    <th style="width:45px;" scope="col">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (categories.Count() > 0)
+                {
+
+                    @foreach (var category in categories)
+                    {
+
+                        <tr>
+                            <td>@category.CategoryId</td>
+                            <td>@category.Name</td>
+                            <td>
+                                <a asp-controller="Admin" asp-action="EditCategory" asp-route-id="@category.CategoryId" class="btn btn-primary ">Edit </a>
+
+                                <form asp-controller="Admin" asp-action="DeleteCategory" method="post" style="display:inline ;">
+                                    <button type="submit" style=color:white; class="btn btn-danger">Delete</button>
+                                    <input type="hidden" name="CategoryId" value="@category.CategoryId">
+                                </form>
+
+
+                            </td>
+                        </tr>
+                    }
+                }
+
+                else
+                {
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="alert alert-warning">
+                                <h3>No Categories </h3>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
